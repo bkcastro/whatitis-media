@@ -17,7 +17,7 @@ function Navbar() {
                 </div>
             </div>
 
-            <div className="bg-gradient-to-r p-2 from-slate-100 to-brandGreen w-screen flex flex-row gap-2">
+            <div className="bg-gradient-to-r p-2 from-slate-100 to-brandGreen w-screen flex flex-row md:justify-center gap-2">
                 <Link className='text-lg text-brandPurple font-bold hover:opacity-75' to="/about" >about</Link>
                 <p className='text-brandPurple my-auto font-semibold'>|</p>
                 <Link className='text-lg text-brandPurple font-bold hover:opacity-75' to="/clients">clients</Link>

@@ -26,10 +26,23 @@ function AboutPage() {
             photo: blair,
         },
         {
+            name: "Ian",
+            title: "Head of Content",
+            about: "Former Narrative Ads Creative Ingenuity Lead. Also creator of this video.",
+            photo: ian,
+        },
+        {
             name: "Chris",
             title: "Meme Magician",
             about: "Foremost expert on Memetics and Jungian Archetypes",
             photo: chris,
+        },
+
+        {
+            name: "Lydia",
+            title: "Head of Partnership",
+            about: "LA’s most well-known influencer who doesn’t make content. ",
+            photo: lydia,
         },
         {
             name: "Andre",
@@ -37,22 +50,10 @@ function AboutPage() {
             about: "LA’s most well-known influencer who doesn’t make content. ",
             photo: andre,
         },
-        {
-            name: "Ian",
-            title: "Head of Content",
-            about: "Former Narrative Ads Creative Ingenuity Lead. Also creator of this video.",
-            photo: ian,
-        },
-        {
-            name: "Lydia",
-            title: "Head of Partnership",
-            about: "LA’s most well-known influencer who doesn’t make content. ",
-            photo: lydia,
-        },
     ]
 
     return <div className="p-2">
-        <p className="">Whatitis <span className="text-brandGreen">Media</span> started 7 years ago as a YouTube chaneel. The value and insight brought the Why It Works series. </p>
+        <p className=" md:text-center">Whatitis <span className="text-brandGreen">Media</span> started 7 years ago as a YouTube chaneel. The value and insight brought the Why It Works series. </p>
 
         <div className="flex flex-wrap justify-center gap-4 my-4">
             <iframe width="300" height="180" src="https://www.youtube.com/embed/JbCygZ8fByw?si=1Vyv2b7WS5fyZQrH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -62,10 +63,10 @@ function AboutPage() {
 
         <div className="p-2">
             <h1 className="text-center">Our <span className="text-brandGreen">team</span></h1>
-            <div className='mt-4 flex flex-wrap justify-start gap-4'>
+            <div className='mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 w-fit mx-auto'>
                 {
                     team.map((memeber, index) => (
-                        <div key={index} className="flex justify-start gap-2">
+                        <div key={index} className="flex justify-start gap-2 w-[350px]">
                             <img src={memeber.photo} className=' h-28 w-28 rounded-md'></img>
                             <div className=''>
                                 <h2 className='text-lg'>{memeber.name} <span className='text-brandGreen'>{memeber.title}</span></h2>

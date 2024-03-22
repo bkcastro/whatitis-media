@@ -21,7 +21,7 @@ function ClientsPage() {
 
 
 
-    return <div className="grid grid-cols-1 gap-2 p-4 sm:grid-cols-2 mx-auto w-fit">
+    return <div className="grid grid-cols-1 gap-2 p-4 sm:grid-cols-2 md:mx-auto w-fit">
         <div>
             <h1 className=" p-2 ">Creators</h1>
             <div className=''>

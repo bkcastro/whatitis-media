@@ -6,13 +6,13 @@ function Navbar() {
 
     return (
         <nav className=''>
-            <div className="text-white w-screen flex justify-center bg-brandPurple py-7">
+            <div className=" w-screen flex justify-center bg-brandPurple py-7">
                 <div className='h-14 w-14 m-2'>
                     <img src={logo} className='' />
                 </div>
 
                 <div className='h-min my-auto'>
-                    <Link to="/" className='text-white text-3xl'>whatitis<span className='text-brandGreen'>.media</span></Link>
+                    <Link to="/" className=' text-3xl'>whatitis<span className='text-brandGreen'>.media</span></Link>
                     <p className='text-sm text-center'>organic virality<span className='text-brandGreen'> simplified</span></p>
                 </div>
             </div>

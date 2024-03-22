@@ -23,7 +23,7 @@ function ClientsPage() {
 
     return <div className="grid grid-cols-1 gap-2 p-4 sm:grid-cols-2 mx-auto w-fit">
         <div>
-            <h1 className="text-white text-2xl p-2 font-semibold">Creators</h1>
+            <h1 className=" p-2 ">Creators</h1>
             <div className=''>
                 {
                     creators.map((creator, index) => (
@@ -36,7 +36,7 @@ function ClientsPage() {
             </div>
         </div>
         <div className=''>
-            <h1 className="text-white text-2xl p-2 font-semibold">Brands</h1>
+            <h1 className=" p-2">Brands</h1>
             <div className='grid grid-clos-1 gap-1'>
                 {
                     brands.map((photo, index) => (

@@ -12,8 +12,8 @@ function Navbar() {
                 </div>
 
                 <div className='h-min my-auto'>
-                    <Link to="/" className=' text-3xl'>whatitis<span className='text-brandGreen'>.media</span></Link>
-                    <p className='text-sm text-center'>organic virality<span className='text-brandGreen'> simplified</span></p>
+                    <Link to="/" className=' text-4xl'>whatitis<span className='text-brandGreen'>.media</span></Link>
+                    <p className='text-md text-center'>organic vir<span className='text-brandGreen'>ality simplified</span></p>
                 </div>
             </div>
 

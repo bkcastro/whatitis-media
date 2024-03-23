@@ -7,11 +7,11 @@ import logo2 from '../assets/memesMatter.png';
 function HomePage() {
 
 
-    return <div className="p-2 text-white">
+    return <div className="p-4 text-white">
         <p className="text-xl md:text-center">Whatitis <span className="text-brandGreen">Media</span> is a boutique social media marketing agency
             focused on helping you make <a className="text-brandGreen underline" href="" target="_blank">organic viral content. </a> </p>
 
-        <div className="mt-4 p-2 w-fit mx-auto">
+        <div className="mt-4 w-fit mx-auto">
             <h1 className="text-center p-2">We work with</h1>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 ">
                 <div className=''>

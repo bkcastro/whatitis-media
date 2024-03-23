@@ -52,7 +52,7 @@ function AboutPage() {
         },
     ]
 
-    return <div className="p-2">
+    return <div className="p-4">
         <p className="text-xl md:text-center">Whatitis <span className="text-brandGreen">Media</span> started 7 years ago as a YouTube chaneel. The value and insight brought the Why It Works series. </p>
 
         <div className="flex flex-wrap justify-center gap-4 my-4">

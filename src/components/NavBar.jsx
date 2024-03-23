@@ -5,8 +5,8 @@ import logo from '../assets/wiilogo.png';
 function Navbar() {
 
     return (
-        <nav className=''>
-            <div className=" w-screen flex justify-center bg-brandPurple py-7">
+        <nav className='mb-4'>
+            <div className="w-screen flex justify-center py-7">
                 <div className='h-14 w-14 m-2'>
                     <img src={logo} className='' />
                 </div>
@@ -17,12 +17,14 @@ function Navbar() {
                 </div>
             </div>
 
-            <div className="bg-gradient-to-r p-2 from-slate-100 to-brandGreen w-screen flex flex-row md:justify-center gap-2">
-                <Link className='text-lg text-brandPurple font-bold hover:opacity-75' to="/about" >about</Link>
-                <p className='text-brandPurple my-auto font-semibold'>|</p>
-                <Link className='text-lg text-brandPurple font-bold hover:opacity-75' to="/clients">clients</Link>
-                <p className='text-brandPurple my-auto font-semibold'>|</p>
-                <Link className='text-lg text-brandPurple font-bold hover:opacity-75' to="/contact">book a call</Link>
+            <div className=" p-2 from-slate-100 to-brandGreen w-screen flex flex-row md:justify-center gap-2">
+                <Link className='text-lg  font-bold hover:opacity-75' to="/">home</Link>
+                <p className='text-brandGreen my-auto'>|</p>
+                <Link className='text-lg font-bold hover:opacity-75' to="/about" >about</Link>
+                <p className='text-brandGreen my-auto'>|</p>
+                <Link className='text-lg  font-bold hover:opacity-75' to="/clients">clients</Link>
+                <p className='text-brandGreen my-auto font-semibold'>|</p>
+                <Link className='text-lg  font-bold hover:opacity-75' to="/contact">contact</Link>
             </div>
         </nav>
     )

@@ -2,7 +2,7 @@
 import React from 'react';
 
 function ContactPage() {
-    return <div>This is the Contact Page</div>;
+    return <div className='mx-auto w-fit'>This is the Contact Page</div>;
 }
 
 export default ContactPage;

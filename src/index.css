@@ -8,7 +8,7 @@
   font-weight: 400;
   color: white;
 
-  background-color: #814D9F;
+  background-color: #525252;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,5 +17,5 @@
 }
 
 h1 {
-  @apply text-2xl font-semibold
+  @apply text-2xl
 }

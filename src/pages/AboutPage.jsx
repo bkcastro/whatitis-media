@@ -53,7 +53,7 @@ function AboutPage() {
     ]
 
     return <div className="p-2">
-        <p className=" md:text-center">Whatitis <span className="text-brandGreen">Media</span> started 7 years ago as a YouTube chaneel. The value and insight brought the Why It Works series. </p>
+        <p className="text-xl md:text-center">Whatitis <span className="text-brandGreen">Media</span> started 7 years ago as a YouTube chaneel. The value and insight brought the Why It Works series. </p>
 
         <div className="flex flex-wrap justify-center gap-4 my-4">
             <iframe width="300" height="180" src="https://www.youtube.com/embed/JbCygZ8fByw?si=1Vyv2b7WS5fyZQrH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

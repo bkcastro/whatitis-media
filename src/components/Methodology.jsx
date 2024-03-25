@@ -103,6 +103,7 @@ function Methodology() {
         const renderer = new THREE.WebGLRenderer({ alpha: true });
         renderer.setSize(width, height);
         renderer.setClearColor(0x000000, 0);
+        renderer.setPixelRatio(window.devicePixelRatio);
         mountRef.current.appendChild(renderer.domElement);
 
         const controls = new OrbitControls(camera, renderer.domElement);
@@ -162,8 +163,8 @@ function Methodology() {
             requestAnimationFrame(animate);
             controls.update();
             objects.forEach((obj) => {
-                obj.rotation.x = Math.sin(elapsedTime);
-                obj.rotation.y = Math.cos(elapsedTime);
+                //obj.rotation.x =  Math.sin(elapsedTime * 0.1) * 1;
+                //obj.rotation.y = Math.sin(elapsedTime * 0.1) * 1.;
             })
             renderer.render(scene, camera);
         };
@@ -198,8 +199,9 @@ function Methodology() {
 
     return (
         <div className="">
-            <h1 className='text-center p-2'>Our methology invloves analyzing content in <span className='text-brandGreen'>3 dimensions.</span></h1>
-            <div ref={mountRef} className='border-2' />
+            <h1 className='text-center p-2'>Our methology involves analyzing content in <span className='text-brandGreen'>3 dimensions.</span></h1>
+            <div ref={mountRef} className='border-0' />
+            <h1 className='text-center p-2'>Check out our <span className='text-brandGreen font-bold underline'>WORKSHEET</span> to see how your content matches up!</h1>
         </div>
     );
 }

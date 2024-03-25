@@ -1,14 +1,14 @@
-import { useState } from 'react'
+
 import { Link } from 'react-router-dom';
-import logo from '../assets/wiilogo.png';
+import logo from '../assets/wiilogo.svg';
 
 function Navbar() {
 
     return (
         <nav className='mb-4'>
             <div className="w-screen flex justify-center py-7">
-                <div className='h-14 w-14 m-2'>
-                    <img src={logo} className='' />
+                <div className='m-2'>
+                    <img src={logo} className='h-[150px] w-[150px] ' />
                 </div>
 
                 <div className='h-min my-auto'>
@@ -18,13 +18,13 @@ function Navbar() {
             </div>
 
             <div className="bg-gradient-r p-2 from-brandGreen to-brandDarkGreen w-screen flex flex-row justify-center gap-2">
-                <Link className='text-lg  font-bold hover:opacity-75' to="/">home</Link>
-                <p className='text-brandGreen my-auto'>|</p>
-                <Link className='text-lg font-bold hover:opacity-75' to="/about" >about</Link>
-                <p className='text-brandGreen my-auto'>|</p>
-                <Link className='text-lg  font-bold hover:opacity-75' to="/clients">clients</Link>
+                <Link className='text-lg  font-bold hover:text-brandGreen' to="/">home</Link>
                 <p className='text-brandGreen my-auto font-semibold'>|</p>
-                <Link className='text-lg  font-bold hover:opacity-75' to="/contact">contact</Link>
+                <Link className='text-lg font-bold hover:text-brandGreen' to="/about" >about</Link>
+                <p className='text-brandGreen my-auto font-semibold'>|</p>
+                <Link className='text-lg  font-bold hover:text-brandGreen' to="/clients">clients</Link>
+                <p className='text-brandGreen my-auto font-semibold'>|</p>
+                <Link className='text-lg  font-bold hover:text-brandGreen' to="/contact">contact</Link>
             </div>
         </nav>
     )

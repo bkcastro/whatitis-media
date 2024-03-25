@@ -8,8 +8,6 @@
   font-weight: 400;
   color: white;
 
-  background-color: #525252;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -18,4 +16,8 @@
 
 h1 {
   @apply text-2xl
+}
+
+:root {
+  @apply bg-brandPurple
 }

@@ -22,32 +22,32 @@ function AboutPage() {
         {
             name: "Blair",
             title: "CEO",
-            about: "YouTuber turned content strategist who has generated over 3 billion impressions.",
+            about: <p>YouTuber turned content strategist who has generated over 3 billion impressions.</p>,
             photo: blair,
         },
         {
             name: "Ian",
             title: "Head of Content",
-            about: "Former Narrative Ads Creative Ingenuity Lead. Also creator of this video.",
+            about: <p>Former Narrative Ads Creative Ingenuity Lead. Also creator of <a className='text-brandGreen underline' href=''>this video</a>.</p>,
             photo: ian,
         },
         {
             name: "Chris",
             title: "Meme Magician",
-            about: "Foremost expert on Memetics and Jungian Archetypes",
+            about: <p>Foremost expert on Memetics and Jungian Archetypes</p>,
             photo: chris,
         },
 
         {
             name: "Lydia",
             title: "Head of Partnership",
-            about: "LA’s most well-known influencer who doesn’t make content. ",
+            about: <p>LA’s most well-known influencer who doesn’t make content.</p>,
             photo: lydia,
         },
         {
             name: "Andre",
             title: "Head of Design",
-            about: "LA’s most well-known influencer who doesn’t make content. ",
+            about: <p>LA’s most well-known influencer who doesn’t make content.</p>,
             photo: andre,
         },
     ]
@@ -65,12 +65,13 @@ function AboutPage() {
             <h1 className="text-center">Our <span className="text-brandGreen">team</span></h1>
             <div className='mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 w-fit mx-auto'>
                 {
+
                     team.map((memeber, index) => (
                         <div key={index} className="flex justify-start gap-2 w-[350px]">
                             <img src={memeber.photo} className=' h-28 w-28 rounded-md'></img>
                             <div className=''>
                                 <h2 className='text-lg'>{memeber.name} <span className='text-brandGreen'>{memeber.title}</span></h2>
-                                <p>{memeber.about}</p>
+                                {memeber.about}
                             </div>
                         </div>
                     ))

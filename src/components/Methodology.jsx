@@ -1,6 +1,5 @@
 import { useRef, useEffect } from 'react'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 import * as THREE from 'three';
 
@@ -44,35 +43,32 @@ function Methodology() {
             emissiveIntensity: .7,
         });
 
-        let model = null;
-
-        // Load the glTF model
+        // Load the glTF models
         const loader = new GLTFLoader();
-        loader.load(
-            '/models/objectA.glb',
-            (gltf) => {
-                model = gltf.scene;
+        const loadModel = (path, index) => {
+            loader.load(
+                path,
+                (gltf) => {
+                    const model = gltf.scene;
+                    model.rotateX(Math.PI / 2);
+                    model.scale.set(0.6, 0.6, 0.6);
+                    objects.push(model); // Store the model in the objects array
+                    scene.add(model); // Add the model to the scene
+                    handleResize();
 
-                model.rotateX(Math.PI / 2)
+                    console.log("model loaded from path: ", path);
+                },
+                undefined,
+                (error) => {
+                    console.error('Error loading glTF model:', error);
+                }
+            );
+        };
 
-                model.children[0].material = brandPurple;
-                model.children[1].material = brandGreen;
-                model.children[2].material = brandGreen;
-                model.children[3].material = brandGreen;
-
-                model.scale.set(.5, .5, .5);
-
-                objects[0].add(model.clone());
-                objects[1].add(model.clone());
-                objects[2].add(model.clone());
-
-                //scene.add(model);
-            },
-            undefined,
-            (error) => {
-                console.error('Error loading glTF model:', error);
-            }
-        );
+        // Load models
+        loadModel('/models/genre.glb', 0)
+        loadModel('/models/design.glb', 1);
+        loadModel('/models/persona.glb', 2);
 
         const { width } = mountRef.current.getBoundingClientRect();
         const height = getClipHeight(width);
@@ -85,7 +81,7 @@ function Methodology() {
         switch (temp) {
             case 1: frustumSize = 4; break;
             case 2: frustumSize = 3; break;
-            case 3: frustumSize = 1.5; break;
+            default: frustumSize = 1.5; break;
         }
 
         const camera = new THREE.OrthographicCamera(
@@ -94,10 +90,10 @@ function Methodology() {
             frustumSize / 2,
             frustumSize / -2,
             1,
-            10
+            20
         );
-        camera.position.set(0, 0, 3);
-        camera.lookAt(scene.position);
+        camera.position.set(0, 0, 4);
+        //camera.lookAt(scene.position);
 
         // Create a renderer
         const renderer = new THREE.WebGLRenderer({ alpha: true });
@@ -106,29 +102,17 @@ function Methodology() {
         renderer.setPixelRatio(window.devicePixelRatio);
         mountRef.current.appendChild(renderer.domElement);
 
-        const controls = new OrbitControls(camera, renderer.domElement);
-        controls.enablePan = false;
-        controls.enableZoom = false;
-        controls.update();
-
         const cube = new THREE.Mesh(new THREE.BoxGeometry(1, 1), new THREE.MeshBasicMaterial({ color: "red" }));
-
-
-        for (let i = 0; i < 3; i++) {
-            const temp = new THREE.Object3D();
-            objects.push(temp);
-            scene.add(temp);
-        }
 
         const updateObjectsAndFrustrum = (width) => {
             const temp = Math.round(width / 350)
             switch (temp) {
                 case 1: frustumSize = 4; break;
                 case 2: frustumSize = 3; break;
-                case 3: frustumSize = 1.5; break;
+                default: frustumSize = 1.5; break;
             }
 
-            const gap = 1.3;
+            const gap = 1.4;
 
             objects.forEach((obj, index) => {
 
@@ -149,7 +133,6 @@ function Methodology() {
                     obj.position.x = (index - 1) * gap;
                     obj.position.y = 0;
                 }
-
             })
         }
 
@@ -161,10 +144,8 @@ function Methodology() {
         const animate = () => {
             const elapsedTime = clock.getElapsedTime();
             requestAnimationFrame(animate);
-            controls.update();
-            objects.forEach((obj) => {
-                //obj.rotation.x =  Math.sin(elapsedTime * 0.1) * 1;
-                //obj.rotation.y = Math.sin(elapsedTime * 0.1) * 1.;
+            objects.forEach((obj, index) => {
+
             })
             renderer.render(scene, camera);
         };

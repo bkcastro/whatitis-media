@@ -12,7 +12,7 @@ function HomePage() {
             focused on helping you make <a className="text-brandGreen underline" href="" target="_blank">organic viral content. </a> </p>
 
         <div className="mt-4 w-fit mx-auto">
-            <h1 className="text-center p-2">We work with</h1>
+            <h1 className="text-center p-2 font-bold">We work with</h1>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 ">
                 <div className=''>
                     <h1 className=" text-brandGreen uppercase p-1 text-center font-bold">Brands</h1>

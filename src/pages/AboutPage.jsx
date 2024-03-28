@@ -7,16 +7,6 @@ import lydia from '../assets/team/lydia.png';
 import andre from '../assets/team/andre.png';
 
 
-
-function TeamMember(name, title, about) {
-    return <div className="grid grid-cols-2">
-        <div className="p-2 flex justify-start">
-            <img />
-        </div>
-
-    </div>
-}
-
 function AboutPage() {
     const team = [
         {
@@ -56,9 +46,9 @@ function AboutPage() {
         <p className="text-xl md:text-center">Whatitis <span className="text-brandGreen">Media</span> started 7 years ago as a YouTube channel. The value and insight brought the Why It Works series quicj. </p>
 
         <div className="flex flex-wrap justify-center gap-4 my-4">
-            <iframe width="300" height="180" src="https://www.youtube.com/embed/JbCygZ8fByw?si=1Vyv2b7WS5fyZQrH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="300" height="180" src="https://www.youtube.com/embed/SHt2cINwRco?si=y3WdQWwrXkW15Il8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="300" height="180" src="https://www.youtube.com/embed/m1UswbloQ8o?si=f-8PBnJ8wyjuL9-U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe className='w-[350px] h-[180px]' src="https://www.youtube.com/embed/JbCygZ8fByw?si=1Vyv2b7WS5fyZQrH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe className='w-[350px] h-[180px]' src="https://www.youtube.com/embed/SHt2cINwRco?si=y3WdQWwrXkW15Il8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe className='w-[350px] h-[180px]' src="https://www.youtube.com/embed/m1UswbloQ8o?si=f-8PBnJ8wyjuL9-U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <div className="p-2">

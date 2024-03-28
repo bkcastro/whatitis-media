@@ -11,16 +11,26 @@ function Methodology() {
         return 350 * Math.min(Math.max((4 - Math.round(width / 350)), 1), 3);
     }
 
+    const animatedObjects = [
+
+    ]
+
     useEffect(() => {
 
         if (mountRef.current == null) {
             return;
         }
-        const objects = [];
+        const objects = [
+            new THREE.Object3D(),
+            new THREE.Object3D(),
+            new THREE.Object3D(),
+        ];
 
         // Create a scene
         const scene = new THREE.Scene();
         scene.background = null; // Set the background to null for transparency
+
+        scene.add(...objects);
 
         // Add an ambient light
         const ambientLight = new THREE.AmbientLight(0x404040, 15);
@@ -37,10 +47,10 @@ function Methodology() {
             emissiveIntensity: .5,
         });
 
-        const brandPurple = new THREE.MeshPhongMaterial({
-            color: new THREE.Color(0x814D9F),
-            emissive: new THREE.Color(0x814D9F),
-            emissiveIntensity: .7,
+        const brandWhite = new THREE.MeshPhongMaterial({
+            color: new THREE.Color(0xffffff),
+            emissive: new THREE.Color(0x9CF6B6),
+            emissiveIntensity: .2,
         });
 
         // Load the glTF models
@@ -49,14 +59,21 @@ function Methodology() {
             loader.load(
                 path,
                 (gltf) => {
+
+                    gltf.scene.traverse(function (child) {
+                        if (child.isMesh) {
+                            child.material = brandGreen;
+                        }
+                    });
                     const model = gltf.scene;
                     model.rotateX(Math.PI / 2);
                     model.scale.set(0.6, 0.6, 0.6);
-                    objects.push(model); // Store the model in the objects array
-                    scene.add(model); // Add the model to the scene
+                    objects[index].add(model); // Store the model in the objects array
+                    //scene.add(model); // Add the model to the scene
                     handleResize();
 
                     console.log("model loaded from path: ", path);
+
                 },
                 undefined,
                 (error) => {
@@ -102,12 +119,10 @@ function Methodology() {
         renderer.setPixelRatio(window.devicePixelRatio);
         mountRef.current.appendChild(renderer.domElement);
 
-        const cube = new THREE.Mesh(new THREE.BoxGeometry(1, 1), new THREE.MeshBasicMaterial({ color: "red" }));
-
         const updateObjectsAndFrustrum = (width) => {
             const temp = Math.round(width / 350)
             switch (temp) {
-                case 1: frustumSize = 4; break;
+                case 1: frustumSize = 4.4; break;
                 case 2: frustumSize = 3; break;
                 default: frustumSize = 1.5; break;
             }

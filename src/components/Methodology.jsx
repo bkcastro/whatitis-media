@@ -94,6 +94,7 @@ function Genre() {
             });
 
             model.scale.set(3, 3, 3);
+            model.position.y = .6
             setInitialRotation(model.rotation.clone());
         }
 
@@ -234,8 +235,8 @@ function Design() {
 
             //console.log(ref);
 
-            model.scale.set(3, 3, 3);
-            //model.position.y = -.5;
+            model.scale.set(2.7, 2.7, 2.7);
+            model.position.y = .5;
             setInitialRotation(model.rotation.clone());
         }
 
@@ -280,44 +281,45 @@ function Methodology() {
         <div className="">
             <h1 className='text-center p-2'>Our methology involves analyzing content in <span className='text-brandGreen'>3 dimensions.</span></h1>
             <div className=" rounded-md flex flex-wrap justify-center gap-4 p-2"  >
-                <Canvas className=' ' style={{ width: '350px', height: '350px' }}>
-                    <ambientLight intensity={1.5} />
-                    <pointLight position={[1, 2, 1]} />
+                <Canvas className='' style={{ width: '350px', height: '350px' }}>
+                    <ambientLight color={0xffffff} intensity={1.5} />
+                    <pointLight color={0xffffff} position={[1, 2, 1]} />
                     <Text
                         scale={[1, 1, 1]}
-                        color="white" // default
+                        color={0xffffff} // default
                         anchorX="center" // default
                         anchorY="middle" // default
-                        position={[0, -1.5, 1]}
+                        position={[0, -2.3, 1]}
+                        fontWeight={500}
                     >genre</Text>
                     <Genre />
-                    <OrbitControls />
                 </Canvas>
                 <Canvas className='' style={{ width: '350px', height: '350px' }}>
-                    <ambientLight intensity={1.5} />
-                    <pointLight position={[-1, -1, 1]} />
+                    <ambientLight color={0xffffff} intensity={1.5} />
+                    <pointLight color={0xffffff} position={[-1, -1, 1]} />
                     <Design />
                     <Text
                         scale={[1, 1, 1]}
-                        color="white" // default
+                        color={0xffffff} // default
                         anchorX="center" // default
                         anchorY="middle" // default
-                        position={[0, -1.5, 1]}
+                        position={[0, -2.3, 1]}
+                        fontWeight={500}
                     >design</Text>
-                    <OrbitControls />
                 </Canvas>
                 <Canvas className='' style={{ width: '350px', height: '350px' }}>
-                    <ambientLight intensity={1.5} />
-                    <pointLight position={[1, 0, 1]} />
+                    <ambientLight color={0xffffff} intensity={1.5} />
+                    <pointLight color={0xffffff} position={[1, 0, 1]} />
                     <Persona />
                     <Text
                         scale={[1, 1, 1]}
-                        color="white" // default
+                        color={0xffffff} // default
                         anchorX="center" // default
                         anchorY="middle" // default
-                        position={[0, -1.5, 1]}
+                        position={[0, -2.3, 1]}
+                        fontWeight={500}
+
                     >persona</Text>
-                    <OrbitControls />
                 </Canvas>
             </div>
             <h1 className='text-center p-2'>Check out our <span className='text-brandGreen font-bold underline'>WORKSHEET</span> to see how your content matches up!</h1>

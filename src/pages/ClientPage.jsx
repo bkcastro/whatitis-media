@@ -47,7 +47,7 @@ function ClientsPage() {
 
 
 
-    return <div className="grid gird-cols-1 sm:grid-cols-2 p-4 mx-auto w-fit">
+    return <div className="grid gird-cols-1 sm:grid-cols-2 p-4 mx-auto w-fit max-w-6xl mx-auto font-bold text-lg sm:text-xl md:text-2xl text-white">
         <div>
             <h1 className=" p-2 font-bold">Creators</h1>
             <div className='grid grid-cols-1 gap-4'>

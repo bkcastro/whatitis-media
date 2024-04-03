@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.logo-transition {
+    height: 100px;
+    width: 100px;
+    transition: height 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+@media (min-width: 640px) {
+    .logo-transition {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media (min-width: 768px) {
+    .logo-transition {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .logo-transition {
+        height: 250px;
+        width: 250px;
+    }
+}

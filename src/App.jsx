@@ -7,8 +7,7 @@ import Navbar from './components/NavBar';
 import Footer from './components/Footer';
 import './App.css'
 
-
-import { SpeedInsights } from "@vercel/speed-insights/next"
+// import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
   return (
@@ -21,7 +20,6 @@ function App() {
         <Route path="/clients" element={<ClientsPage />} />
       </Routes>
       <Footer></Footer>
-      <SpeedInsights />
     </Router>
   );
 }

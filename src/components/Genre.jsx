@@ -14,11 +14,9 @@ const brandGreenMaterial = new THREE.MeshStandardMaterial({
 const glassMaterial = new THREE.MeshPhysicalMaterial({
     color: new THREE.Color(0xffffff),
     emissive: new THREE.Color(0xffffff),
-    roughness: 0.3,
-    metalness: 0.3,
-    thickness: 0.1,
+    emissiveIntensity: 100,
     side: 0,
-});
+})
 
 function Genre() {
     const gltf = useLoader(GLTFLoader, "/models/genre.glb");

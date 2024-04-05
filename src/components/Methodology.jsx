@@ -25,7 +25,7 @@ function Methodology() {
                         position={[0, -2.3, 1]}
                         fontWeight={500}
                     >{`genre`}
-                        <meshStandardMaterial color="white" emissive="white" emissiveIntensity={3} />
+                        <meshStandardMaterial color="white" emissive="white" emissiveIntensity={300} />
                     </Text>
                     <OrbitControls enableZoom={false} />
                 </Canvas>
@@ -43,7 +43,7 @@ function Methodology() {
                         position={[0, -2.3, 1]}
                         fontWeight={500}
                     >{`design`}
-                        <meshStandardMaterial color="white" emissive="white" emissiveIntensity={3} />
+                        <meshStandardMaterial color="white" emissive="white" emissiveIntensity={300} />
                     </Text>
                     <OrbitControls enableZoom={false} />
                 </Canvas>
@@ -58,12 +58,12 @@ function Methodology() {
                         fontSize={1}
                         scale={[.9, .9, .9]}
                         color={0xffffff} // default
-                        anchorX="center" // default
+                        anchorX="center" // def
                         anchorY="middle" // default
                         position={[0, -2.3, 1]}
                         fontWeight={500}
                     >{`persona`}
-                        <meshStandardMaterial color="white" emissive="white" emissiveIntensity={3} />
+                        <meshStandardMaterial color="white" emissive="white" emissiveIntensity={300} />
                     </Text>
                     <OrbitControls enableZoom={false} />
                 </Canvas>

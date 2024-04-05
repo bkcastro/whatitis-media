@@ -42,7 +42,7 @@ function AboutPage() {
         },
     ]
 
-    return <div className="p-4 max-w-6xl mx-auto font-bold text-lg sm:text-xl md:text-2xl text-white">
+    return <div className="p-4 max-w-6xl mx-auto font-bold text-lg sm:text-xl md:text-2xl text-white max-w-6xl mx-auto">
         <div className='grid grid-cols-1 gap-4 text-md sm:text-lg md:text-xl'>
             <p className=''>Whatitis <span className="text-brandGreen">Media</span> started 7 years ago as a YouTube channel analyzing internet culture.
                 Our series Why It Works broke down  content using a 3-part methodology. The first video below is an early example of the success we saw with this format.</p>

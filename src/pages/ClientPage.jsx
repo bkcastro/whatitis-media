@@ -31,7 +31,6 @@ function ClientsPage() {
         { photo: fgm, link: 'https://www.tiktok.com/@readyfictions?lang=en' },
         { photo: usc, link: 'https://polymathic.usc.edu/ahmanson-lab' },
         { photo: tetra, link: 'https://www.tetragrammaton.com/' },
-        { photo: fs, link: 'https://www.fragrancesupply.co/' }
     ];
 
     const creators = [
@@ -47,30 +46,30 @@ function ClientsPage() {
 
 
 
-    return <div className="grid gird-cols-1 sm:grid-cols-2 p-4 mx-auto w-fit max-w-6xl mx-auto font-bold text-lg sm:text-xl md:text-2xl text-white">
+    return <div className="grid gird-cols-1 sm:grid-cols-1 md:grid-cols-2 p-4 mx-auto w-fit max-w-6xl font-bold text-lg sm:text-xl md:text-2xl text-white">
         <div>
             <h1 className=" p-2 font-bold">Creators</h1>
             <div className='grid grid-cols-1 gap-4'>
                 {
                     creators.map((creator, index) => (
                         <div key={index} className='flex justify-start'>
-                            <a href={creator.link} target='_blank'><img key={index} src={creator.photo} alt="creators image" className='hover:opacity-80 w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] rounded-md'></img></a>
+                            <a href={creator.link} target='_blank'><img key={index} src={creator.photo} alt="creators image" className='hover:opacity-80 h-32 w-32 sm:h-36  sm:w-36  md:h-52 md:w-52 rounded-md'></img></a>
                             <p className='p-2 text-lg md:text-2xl text-start my-auto text-white font-bold'>{creator.name}</p>
                         </div>
                     ))
                 }
             </div>
         </div>
-        <div className='w-fit'>
+        <div className=''>
             <h1 className="p-2 font-bold">Brands</h1>
-            <div className='grid grid-clos-1 gap-4'>
+            <div className='grid grid-clos-1 gap-4 mx-auto w-[250px] sm:w-[320px]'>
                 {
                     brands.map((brand, index) => (
                         <div key={index} className='flex justify-center w-full'><a href={brand.link} target='_blank'><img key={index} src={brand.photo} alt="brand image" className=''></img></a></div>
                     ))
                 }
                 <div key={11} className='flex flex-col justify-center items-center'>
-                    <a href='https://www.rosebud.ai/company' target='_blank'><img key={11} src={rosebud} alt="brand image" className='w-[300px]'></img></a>
+                    <a href='https://www.rosebud.ai/company' target='_blank'><img key={11} src={rosebud} alt="brand image" className=''></img></a>
                     <h2 className='text-4xl text-white text-center'>Rosebud AI</h2>
                 </div>
             </div>

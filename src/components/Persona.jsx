@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { useFrame, useLoader } from '@react-three/fiber';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import { useAnimations, Text, Stats } from '@react-three/drei';
+import { useAnimations } from '@react-three/drei';
 
 import * as THREE from 'three';
 
@@ -11,18 +11,65 @@ const brandGreenMaterial = new THREE.MeshStandardMaterial({
     roughness: 0.2
 });
 
-const glassMaterial = new THREE.MeshPhysicalMaterial({
-    color: new THREE.Color(0xffffff),
-    emissive: new THREE.Color(0xffffff),
-    emissiveIntensity: 100,
-    side: 0,
-});
+// Vertex shader
+const vertexShader = `
+  uniform vec3 color; 
+  uniform float time; 
+  varying vec3 vPosition;
+  varying vec3 vColor;
+
+  void main() {
+    vPosition = position;
+    vColor = color;
+    vec3 transformedPosition = position;
+    float timeFactorA = 0.5 + 0.5 * sin(time); 
+    float timeFactorB = 0.5 + 0.3 * cos(time);
+    float timeFactorC = 0.2 + 0.6 * sin(time);
+
+    if (position.y > 0.0) {
+        transformedPosition.y = mix(position.y,(.9*position.y)+position.y, timeFactorA);
+    } else {
+        if (position.x > 0.0) {
+            // right side 
+            transformedPosition.x = mix(position.x,(.9*position.x)+position.x, timeFactorB);
+            transformedPosition.y = mix(position.y,(.9*position.y)+position.y, timeFactorB);
+        } else {
+            // left side 
+            transformedPosition.x = mix(position.x,(.9*position.x)+position.x, timeFactorC);
+            transformedPosition.y = mix(position.y,(.9*position.y)+position.y, timeFactorC);
+        }
+    }
+
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(transformedPosition, 1.0);
+  }
+`;
+
+// Fragment shader
+const fragmentShader = `
+  varying vec3 vPosition;
+  varying vec3 vColor;
+
+  void main() {
+    // Simple color transformation based on position
+    gl_FragColor = vec4(vColor, 1.0);
+  }
+`;
+
+const innerTriangleMaterial = new THREE.ShaderMaterial({
+    uniforms: {
+        time: { value: 0.0 }, 
+        current: {value: 1.0},
+        next: {value: 1.0},
+        color: {value: new THREE.Color("white")}
+    },
+    vertexShader: vertexShader, 
+    fragmentShader: fragmentShader,
+})
+
 
 function Persona() {
     const gltf = useLoader(GLTFLoader, "/models/persona.glb");
     const ref = useRef();
-    const [isHovered, setIsHovered] = useState(false);
-    const [initialRotation, setInitialRotation] = useState(new THREE.Euler());
     const { actions } = useAnimations(gltf.animations, ref);
 
     useEffect(() => {
@@ -34,55 +81,15 @@ function Persona() {
             gltf.scene.traverse(child => {
                 if (child.isMesh) {
                     if (child.name == "b") {
-                        child.material = glassMaterial;
+                        child.material = innerTriangleMaterial;
                     } else {
                         child.material = brandGreenMaterial;
                     }
                 }
             });
 
-            //console.log(ref);
-
-            const innerTrianlge = gltf.scene.getObjectByName('b');
-            const vertices = innerTrianlge.geometry.attributes.position.array;
-            const lerpTo = [vertices.length];
-
-            const edgeA = [];
-            const edgeB = [];
-            const edgeC = [];
-
-            const A = new THREE.Vector3(0);
-            const B = new THREE.Vector3(0);
-            const C = new THREE.Vector3(0);
-
-            for (let i = 0; i < vertices.length / 3; i++) {
-                const x = vertices[(3 * i) + 0];
-                const y = vertices[(3 * i) + 1];
-                const z = vertices[(3 * i) + 2];
-
-
-                if (y > 0) {
-                    edgeA.push(new THREE.Vector3(x, y, z))
-
-                    //vertices[(3 * i) + 1] = y * 1.9;
-                } else {
-                    if (x > 0) {
-                        edgeB.push(new THREE.Vector3(x, y, z))
-
-                        //vertices[(3 * i) + 0] = x * 1.9;
-                        //vertices[(3 * i) + 1] = y * 1.9;
-                    } else {
-                        edgeC.push(new THREE.Vector3(x, y, z))
-                        // vertices[(3 * i) + 0] = x * 1.9;
-                        // vertices[(3 * i) + 1] = y * 1.9;
-                    }
-                }
-            }
-
-            console.log(edgeA, edgeB, edgeC);
             model.scale.set(3.5, 3.5, 3.5);
             //model.position.y = -.5;
-            setInitialRotation(model.rotation.clone());
         }
 
     }, [gltf, actions]);
@@ -90,25 +97,11 @@ function Persona() {
     // Update rotation on mouse hover
     useFrame((state) => {
         if (ref.current) {
-            const { x, y } = state.mouse;
-
-            const time = state.clock.getElapsedTime();
-            const speed = .2; // Speed of rotation
-
-            // Find and rotate the child named 'a' around a radius
-            const childA = ref.current.getObjectByName('a');
-            if (childA) {
-                //childA.rotation.z = time * speed;
-            }
-
-            const childB = ref.current.getObjectByName('b');
-            if (childB) {
-                //childB.rotation.y = time * speed * 2;
-            }
+            innerTriangleMaterial.uniforms.time.value = state.clock.getElapsedTime(); 
         }
     });
 
-    return <primitive object={gltf.scene} ref={ref} onPointerOver={() => setIsHovered(true)} onPointerOut={() => setIsHovered(false)} />;
+    return <primitive object={gltf.scene} ref={ref} />;
 }
 
 export default Persona;

@@ -1,8 +1,8 @@
 // HomePage.js
 import Methodology from '../components/Methodology';
 import { Link } from 'react-router-dom';
-import logo1 from '../assets/pp.png';
-import logo2 from '../assets/memesMatter.jpg';
+import image1 from '../assets/pp.png';
+import image2 from '../assets/memesMatter.jpg';
 
 function HomePage() {
 
@@ -17,11 +17,11 @@ function HomePage() {
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 ">
                 <div className=''>
                     <h1 className=" text-brandGreen uppercase p-1 text-center font-bold italic">Brands</h1>
-                    <img src={logo1} className='rounded-md'></img>
+                    <img src={image1} className='rounded-md'></img>
                 </div>
                 <div className=''>
                     <h1 className=" text-brandGreen uppercase p-1 text-center font-bold italic">Creators</h1>
-                    <img src={logo2} className='rounded-md mx-auto'></img>
+                    <img src={image2} className='rounded-md mx-auto'></img>
                 </div>
             </div>
         </div>

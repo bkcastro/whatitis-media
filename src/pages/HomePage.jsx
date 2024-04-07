@@ -1,8 +1,8 @@
 // HomePage.js
 import Methodology from '../components/Methodology';
 import { Link } from 'react-router-dom';
-import logo1 from '../assets/image 17.png';
-import logo2 from '../assets/image 19.png';
+import logo1 from '../assets/pp.png';
+import logo2 from '../assets/memesMatter.jpg';
 
 function HomePage() {
 

@@ -43,6 +43,7 @@ function Genre() {
 
             model.scale.set(3, 3, 3);
             model.position.y = .6
+            //model.rotation.x = (Math.PI * 2);
             setInitialRotation(model.rotation.clone());
         }
 

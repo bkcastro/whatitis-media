@@ -45,9 +45,18 @@ function Design() {
 
             //console.log(ref);
 
+            model.rotateY(Math.PI);
             model.scale.set(2.7, 2.7, 2.7);
             model.position.y = .5;
+
             setInitialRotation(model.rotation.clone());
+
+            // Play all animations once
+            Object.values(actions).forEach(action => {
+                action.clampWhenFinished = true;
+                action.loop = THREE.LoopOnce;
+                action.play();
+            });
         }
 
     }, [gltf, actions]);

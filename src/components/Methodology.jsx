@@ -10,6 +10,7 @@ import Genre from './Genre';
 import Persona from './Persona'
 
 function Methodology() {
+
     return (
         <div className="rounded-md flex flex-wrap justify-center gap-4 p-2 lg:p-4"  >
             <div className='w-[250px] h-[250px] sm:w-[275px] sm:h-[275px]  md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] hover:cursor-pointer'>

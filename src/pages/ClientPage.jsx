@@ -9,7 +9,7 @@ import sg from '../assets/brands/studioghibli.png';
 
 import fs from '../assets/brands/fs.png';
 import rosebud from '../assets/brands/rosebud-2.png';
-import usc from '../assets/brands/usc.png';
+import usc from '../assets/brands/ucscLogo.png';
 import tetra from '../assets/brands/tetra-4.png';
 
 import memesMatter from '../assets/creators/memes-matter.jpg';

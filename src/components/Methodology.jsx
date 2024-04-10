@@ -28,7 +28,7 @@ function Methodology() {
                     >{`genre`}
                         <meshStandardMaterial color="white" emissive="white" emissiveIntensity={300} />
                     </Text>
-                    <OrbitControls enableZoom={false} />
+                    {/* <OrbitControls enableZoom={false} /> */}
                 </Canvas>
             </div>
             <div className='w-[250px] h-[250px] sm:w-[275px] sm:h-[275px]  md:w-[300px] md:h-[300px]  lg:w-[350px] lg:h-[350px] hover:cursor-pointer'>
@@ -46,7 +46,7 @@ function Methodology() {
                     >{`design`}
                         <meshStandardMaterial color="white" emissive="white" emissiveIntensity={300} />
                     </Text>
-                    <OrbitControls enableZoom={false} />
+                    {/* <OrbitControls enableZoom={false} /> */}
                 </Canvas>
             </div>
             <div className='w-[250px] h-[250px] sm:w-[275px] sm:h-[275px]  md:w-[300px] md:h-[300px]  lg:w-[350px] lg:h-[350px] hover:cursor-pointer'>
@@ -66,7 +66,7 @@ function Methodology() {
                     >{`persona`}
                         <meshStandardMaterial color="white" emissive="white" emissiveIntensity={300} />
                     </Text>
-                    <OrbitControls enableZoom={false} />
+                    {/* <OrbitControls enableZoom={false} /> */}
                 </Canvas>
             </div>
         </div>

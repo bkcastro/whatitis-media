@@ -28,7 +28,7 @@ function HomePage() {
 
         <div className='border-2 border-brandGreen p-2 text-center w-fit mx-auto my-4'>Try our <a className='text-brandGreen font-bold underline italic'>Quiz</a> to see who your content is similar to!</div>
 
-        <h2 className='text-center'>Our methology involves analyzing content in <span className='text-brandGreen'>3 dimensions.</span></h2>
+        <h2 className='text-center'>Our methodology involves analyzing content in <span className='text-brandGreen'>3 dimensions.</span></h2>
         <Methodology></Methodology>
         {//<h1 className='text-center p-2'>Check out our <span className='text-brandGreen font-bold underline italic'>WORKSHEET</span> to see how your content matches up!</h1>
         }

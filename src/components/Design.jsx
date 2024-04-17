@@ -55,6 +55,7 @@ function Design() {
             Object.values(actions).forEach(action => {
                 action.clampWhenFinished = true;
                 action.loop = THREE.LoopOnce;
+                action.timeScale = 1.25;  // Increase speed by 25%
                 action.play();
             });
         }

@@ -3,14 +3,22 @@ import Methodology from '../components/Methodology';
 import { Link } from 'react-router-dom';
 import image1 from '../assets/pp.png';
 import image2 from '../assets/memesMatter.jpg';
+import CardStack from '../components/CardStack';
 
 function HomePage() {
 
+    const pudgyPenguins = ["Penguin 1", "Penguin 2", "Penguin 3", "Penguin 4"];
+    const memeAnalysis = ["Meme 1", "Meme 2", "Meme 3", "Meme 4"];
 
     return <div className="p-4 font-bold text-lg sm:text-xl md:text-2xl text-white max-w-6xl mx-auto">
         <p className="">Whatitis <span className="text-brandGreen">Media</span> is a boutique social media marketing agency
             focused on helping you make <a className="text-brandGreen underline" href="https://www.youtube.com/@Whatitis" target="_blank">organic viral content. </a>
         </p>
+
+        <div className='grid grid-cols-2 mx-auto border-2 p-2 '>
+            <CardStack cards={pudgyPenguins} title="Pudgy Penguins" />
+            {/* <CardStack cards={memeAnalysis} title="Meme Analysis" /> */}
+        </div>
 
         <div className="py-5 w-fit mx-auto">
             <h1 className="text-center p-2 font-bold">We work with</h1>

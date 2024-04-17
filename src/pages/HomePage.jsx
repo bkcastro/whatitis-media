@@ -15,10 +15,10 @@ function HomePage() {
             focused on helping you make <a className="text-brandGreen underline" href="https://www.youtube.com/@Whatitis" target="_blank">organic viral content. </a>
         </p>
 
-        <div className='grid grid-cols-2 mx-auto border-2 p-2 '>
+        {/* <div className='grid grid-cols-2 mx-auto border-2 p-2 '>
             <CardStack cards={pudgyPenguins} title="Pudgy Penguins" />
-            {/* <CardStack cards={memeAnalysis} title="Meme Analysis" /> */}
-        </div>
+            <CardStack cards={memeAnalysis} title="Meme Analysis" />
+        </div> */}
 
         <div className="py-5 w-fit mx-auto">
             <h1 className="text-center p-2 font-bold">We work with</h1>

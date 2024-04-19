@@ -10,45 +10,16 @@ const CardStack = ({ cards, title }) => {
     };
 
     return (
-        <div className="cursor-pointer border w-full" onClick={handleClick}>
-            <h3 className="text-center text-lg font-bold mb-4">{title}</h3>
-            {/* {stack.map((card, index) => (
-                <div key={index} className={`absolute bg-white border border-black rounded-lg p-4 text-center shadow-md
-                                            transform transition-all duration-300 ease-in-out
-                                            ${index * 20} translate-y-${index * 20}`}>
-                    {card}
-                </div>
-            ))} */}
-
-            <div class="container border-2 ">
-                <div class="card">
-                    <h3 class="title">Card 1</h3>
-                    <div class="bar">
-                        <div class="emptybar"></div>
-                        <div class="filledbar"></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3 class="title">Card 2</h3>
-                    <div class="bar">
-                        <div class="emptybar"></div>
-                        <div class="filledbar"></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3 class="title">Card 3</h3>
-                    <div class="bar">
-                        <div class="emptybar"></div>
-                        <div class="filledbar"></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3 class="title">Card 4</h3>
-                    <div class="bar">
-                        <div class="emptybar"></div>
-                        <div class="filledbar"></div>
-                    </div>
-                </div>
+        <div className="cursor-pointer w-full" onClick={handleClick}>
+            <h1 className=" text-brandGreen uppercase p-1 text-center font-bold italic">{title}</h1>
+            <div class="container p-6">
+                {stack.map((card, index) => (
+                    <div
+                        key={index}
+                        className="card"
+                        style={{ backgroundImage: `url(${card})` }}
+                    />
+                ))}
             </div>
         </div>
     );

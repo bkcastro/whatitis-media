@@ -1,28 +1,40 @@
 // HomePage.js
 import Methodology from '../components/Methodology';
 import { Link } from 'react-router-dom';
-import image1 from '../assets/pp.png';
-import image2 from '../assets/memesMatter.jpg';
+
+
 import CardStack from '../components/CardStack';
+
+// Brands 
+import image1 from '../assets/pp.png';
+import tetra from '../assets/brands/tetra-4.png';
+import extra from '../assets/brands/extra.png';
+import fgm from '../assets/brands/feelsgood.jpg';
+
+// Clients
+import image2 from '../assets/memesMatter.jpg';
+import memesMatter from '../assets/creators/memes-matter.jpg';
+import gardenMarcus from '../assets/creators/garden-marcus.jpg';
+import recklessBen from '../assets/creators/recklessben.jpg';
+
 
 function HomePage() {
 
-    const pudgyPenguins = ["Penguin 1", "Penguin 2", "Penguin 3", "Penguin 4"];
-    const memeAnalysis = ["Meme 1", "Meme 2", "Meme 3", "Meme 4"];
+    const brands = [image1, extra, tetra, fgm];
+    const creators = [image2, memesMatter, gardenMarcus, recklessBen];
 
     return <div className="p-4 font-bold text-lg sm:text-xl md:text-2xl text-white max-w-6xl mx-auto">
         <p className="">Whatitis <span className="text-brandGreen">Media</span> is a boutique social media marketing agency
             focused on helping you make <a className="text-brandGreen underline" href="https://www.youtube.com/@Whatitis" target="_blank">organic viral content. </a>
         </p>
 
-        {/* <div className='grid grid-cols-2 mx-auto border-2 p-2 '>
-            <CardStack cards={pudgyPenguins} title="Pudgy Penguins" />
-            <CardStack cards={memeAnalysis} title="Meme Analysis" />
-        </div> */}
-
-        <div className="py-5 w-fit mx-auto">
+        <div className="py-5 w-full mx-auto">
             <h1 className="text-center p-2 font-bold">We work with</h1>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 ">
+            <div className='grid grid-cols-1 md:grid-cols-2 p-2 '>
+                <CardStack cards={brands} title="Brands" />
+                <CardStack cards={creators} title="Creators" />
+            </div>
+            {/* <div className="grid grid-cols-1 gap-4 md:grid-cols-2 ">
                 <div className=''>
                     <h1 className=" text-brandGreen uppercase p-1 text-center font-bold italic">Brands</h1>
                     <img src={image1} className='rounded-md'></img>
@@ -31,7 +43,7 @@ function HomePage() {
                     <h1 className=" text-brandGreen uppercase p-1 text-center font-bold italic">Creators</h1>
                     <img src={image2} className='rounded-md mx-auto'></img>
                 </div>
-            </div>
+            </div> */}
         </div>
 
         <div className='border-2 border-brandGreen p-2 text-center w-fit mx-auto my-4'>Try our <a className='text-brandGreen font-bold underline italic'>Quiz</a> to see who your content is similar to!</div>

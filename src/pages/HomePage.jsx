@@ -46,7 +46,7 @@ function HomePage() {
             </div> */}
         </div>
 
-        <div className='border-2 border-brandGreen p-2 text-center w-fit mx-auto my-4'>Try our <a className='text-brandGreen font-bold underline italic'>Quiz</a> to see who your content is similar to!</div>
+        <div className='border-2 border-brandGreen p-2 text-center w-fit mx-auto my-4'>Try our <a href={"https://blair-chapman.formaloo.co/d62tpo"} target='_blank' className='text-brandGreen font-bold underline italic'>Quiz</a> to see who your content is similar to!</div>
 
         <h2 className='text-center'>Our methodology involves analyzing content in <span className='text-brandGreen'>3 dimensions.</span></h2>
         <Methodology></Methodology>

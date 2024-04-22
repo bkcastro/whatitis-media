@@ -32,9 +32,8 @@
     /* 80% overlap */
 }
 
-
 .card:hover {
-    transform: translateY(-25px);
+    transform: translateX(-25px);
     z-index: 1000;
     /* Brings hovered card to the front */
     transition: 0.5s ease-out;

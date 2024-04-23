@@ -7,10 +7,6 @@ import CardStack from '../components/CardStack';
 
 // Brands 
 import image1 from '../assets/pp.png';
-import tetra from '../assets/brands/tetra-4.png';
-import extra from '../assets/brands/extra.png';
-import fgm from '../assets/brands/feelsgood.jpg';
-
 // Clients
 import image2 from '../assets/memesMatter.jpg';
 import memesMatter from '../assets/creators/memes-matter.jpg';
@@ -20,7 +16,7 @@ import recklessBen from '../assets/creators/recklessben.jpg';
 
 function HomePage() {
 
-    const brands = [image1, extra, tetra, fgm];
+    const brands = [image1];
     const creators = [image2, memesMatter, gardenMarcus, recklessBen];
 
     return <div className="p-4 font-bold text-lg sm:text-xl md:text-2xl text-white max-w-6xl mx-auto">
@@ -31,7 +27,7 @@ function HomePage() {
         <div className="py-5 w-full mx-auto">
             <h1 className="text-center p-2 font-bold">We work with</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 p-2 '>
-                <CardStack cards={brands} title="Brands" />
+                <CardStack cards={brands} title="Brands" blanks={3} />
                 <CardStack cards={creators} title="Creators" />
             </div>
             {/* <div className="grid grid-cols-1 gap-4 md:grid-cols-2 ">

@@ -7,7 +7,6 @@ import laa from '../assets/brands/laa-2.png';
 import pudgy from '../assets/brands/pudgy-2.png';
 import sg from '../assets/brands/studioghibli.png';
 
-import fs from '../assets/brands/fs.png';
 import rosebud from '../assets/brands/rosebud-2.png';
 import usc from '../assets/brands/ucscLogo.png';
 import tetra from '../assets/brands/tetra-4.png';
@@ -43,8 +42,6 @@ function ClientsPage() {
         { photo: mia, name: "Memes Intelligence Agency", link: 'https://www.tiktok.com/tag/memeintelligenceagency?lang=en' },
         { photo: yesTheory, name: "Yes Theory", link: 'https://www.youtube.com/channel/UCvK4bOhULCpmLabd2pDMtnA' },
     ];
-
-
 
     return <div className="grid gird-cols-1 sm:grid-cols-1 md:grid-cols-2 p-4 mx-auto w-fit max-w-6xl font-bold text-lg sm:text-xl md:text-2xl text-white">
         <div>

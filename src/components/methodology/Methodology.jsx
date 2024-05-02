@@ -101,7 +101,7 @@ function ResettableOrbitControls() {
 function Methodology() {
 
     return (
-        <div className="rounded-md flex flex-wrap justify-center gap-4 p-2 lg:p-4"  >
+        <div className="rounded-md flex flex-wrap justify-center gap-4 p-2 mt-4 sm:mt-10 w-full h-fit lg:p-4"  >
             <div className='w-[250px] h-[250px] sm:w-[275px] sm:h-[275px]  md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] hover:cursor-pointer'>
                 <Canvas>
                     <ambientLight color={0xffffff} intensity={1.8} />

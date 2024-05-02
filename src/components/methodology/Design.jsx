@@ -25,7 +25,6 @@ function Design() {
     const [initialRotation, setInitialRotation] = useState(new THREE.Euler());
     const { actions } = useAnimations(gltf.animations, ref);
 
-
     useEffect(() => {
         // Access the model once it's loaded
         if (gltf.scene) {

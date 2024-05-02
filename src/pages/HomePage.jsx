@@ -1,5 +1,5 @@
 // HomePage.js
-import Methodology from '../components/Methodology';
+import Methodology from '../components/methodology/Methodology';
 import { Link } from 'react-router-dom';
 
 

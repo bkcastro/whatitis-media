@@ -1,7 +1,5 @@
 // HomePage.js
 import Methodology from '../components/methodology/Methodology';
-import { Link } from 'react-router-dom';
-
 
 import CardStack from '../components/CardStack';
 
@@ -13,16 +11,20 @@ import memesMatter from '../assets/creators/memes-matter.jpg';
 import gardenMarcus from '../assets/creators/garden-marcus.jpg';
 import recklessBen from '../assets/creators/recklessben.jpg';
 
-
 function HomePage() {
 
     const brands = [image1];
     const creators = [image2, memesMatter, gardenMarcus, recklessBen];
 
     return <div className="p-4 font-bold text-lg sm:text-xl md:text-2xl text-white max-w-6xl mx-auto">
-        <p className="">Whatitis <span className="text-brandGreen">Media</span> is a boutique social media marketing agency
-            focused on helping you make <a className="text-brandGreen underline" href="https://www.youtube.com/@Whatitis" target="_blank">organic viral content. </a>
-        </p>
+
+        <p className='pb-5 text-center w-[300px] sm:w-[350px] md:w-[400px lg:w-[800px] mx-auto'>Whatitis <span className="text-brandGreen">Media</span> is a boutique organic social agency focused on helping you make  <span className='text-brandGreen'>viral content. </span> </p>
+        <p className='pb-5 text-center'>We have generated over <span className='text-brandGreen'>3 billion organic views.</span> </p>
+        <p className='text-center'>Do you need help running your socials?</p>
+
+        <div className='mt-7 w-full flex justify-center'>
+            <a to="/contact" className="p-5 bg-gradient-to-r from-brandGreen to-brandDarkGreen rounded-full text-brandPurple text-xl hover:opacity-90">book a call</a>
+        </div>
 
         <div className="py-5 w-full mx-auto">
             <h1 className="text-center p-2 font-bold">We work with</h1>
@@ -42,15 +44,21 @@ function HomePage() {
             </div> */}
         </div>
 
-        <div className='border-2 border-brandGreen p-2 text-center w-fit mx-auto my-4'>Try our <a href={"https://blair-chapman.formaloo.co/d62tpo"} target='_blank' className='text-brandGreen font-bold underline italic'>Quiz</a> to see who your content is similar to!</div>
+        <div className='grid grid-cols-1 md:grid-cols-2 h-auto bg-gradient-to-r from-brandGreen to-brandDarkGreen rounded-sm p-5'>
+            <div className='p-2 sm:p-3 md:p-4 flex justify-center items-center flex-col gap-5 sm:gap-6 md:gap-10'>
+                <p className='text-brandPurple text-3xl md:text-5xl text-center'>Try our quiz to see  what your creator archetype is?</p>
+                <a href={"https://blair-chapman.formaloo.co/d62tpo"} target='_blank'  className='p-6 w-fit text-brandGreen text-2xl sm:text rounded-full bg-gradient-to-r from-brandPurple to-brandLightPurple'>take the quiz</a>
+            </div>
+            <div className='bg-black w-full h-full'>
 
-        <h2 className='text-center'>Our methodology involves analyzing content in <span className='text-brandGreen'>3 dimensions.</span></h2>
+            </div>
+        </div>
+
+        <h2 className='pt-10 text-center'>Our methodology involves analyzing content in <span className='text-brandGreen'>3 dimensions.</span></h2>
         <Methodology></Methodology>
         {//<h1 className='text-center p-2'>Check out our <span className='text-brandGreen font-bold underline italic'>WORKSHEET</span> to see how your content matches up!</h1>
         }
-        <div className='mt-7 w-full flex justify-center'>
-            <Link to="/contact" className="p-5 bg-gradient-to-r p-2 from-brandGreen to-brandDarkGreen rounded-full text-brandPurple text-xl hover:opacity-90">book a call with Blair</Link>
-        </div>
+        
     </div>
 }
 

@@ -13,6 +13,7 @@ module.exports = {
       colors: {
         'brandGreen': '#9CF6B6',
         'brandPurple': "#814D9F",
+        'brandLightPurple': "#ad7fc7",
         'brandDarkGreen': '#459557',
       }
     },

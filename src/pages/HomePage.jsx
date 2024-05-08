@@ -1,7 +1,7 @@
 // HomePage.js
 import Methodology from '../components/methodology/Methodology';
 
-import CardStack from '../components/CardStack';
+// import CardStack from '../components/CardStack';
 
 // Brands 
 import image1 from '../assets/pp.png';
@@ -28,11 +28,11 @@ import creator14 from '../assets/Quiz_Faces/14.jpg';
 import creator15 from '../assets/Quiz_Faces/15.jpg';
 import creator16 from '../assets/Quiz_Faces/16.jpg';
 
+import CardStack from '../components/CardStack';
+
 const ImageComponent = ({ src }) => (
     <img src={src} alt="Creator" className='hover:opacity-70' />
 );
-
-
 
 function HomePage() {
 
@@ -41,12 +41,7 @@ function HomePage() {
         creator7, creator8, creator9, creator10, creator11, creator12,
         creator13, creator14, creator15, creator16
     ];
-
-    const ImageComponent = ({ src }) => (
-        <img src={src} alt="Creator" className='hover:opacity-70' />
-    );
-
-
+    
     const brands = [image1];
     const creators = [image2, memesMatter, gardenMarcus, recklessBen];
 
@@ -62,20 +57,10 @@ function HomePage() {
 
         <div className="py-5 w-full mx-auto">
             <h1 className="text-center p-2 font-bold">We work with</h1>
-            <div className='grid grid-cols-1 md:grid-cols-2 p-2 '>
-                <CardStack cards={brands} title="Brands" blanks={3} />
-                <CardStack cards={creators} title="Creators" />
+            <div className='py-20 grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-0'>
+            <CardStack images={brands}/>
+            <CardStack images={creators}/>
             </div>
-            {/* <div className="grid grid-cols-1 gap-4 md:grid-cols-2 ">
-                <div className=''>
-                    <h1 className=" text-brandGreen uppercase p-1 text-center font-bold italic">Brands</h1>
-                    <img src={image1} className='rounded-md'></img>
-                </div>
-                <div className=''>
-                    <h1 className=" text-brandGreen uppercase p-1 text-center font-bold italic">Creators</h1>
-                    <img src={image2} className='rounded-md mx-auto'></img>
-                </div>
-            </div> */}
         </div>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-5 h-auto bg-gradient-to-r from-brandGreen to-brandDarkGreen rounded-sm p-5'>

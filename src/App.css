@@ -11,11 +11,32 @@
         transform: rotate(360deg);
     }
 }
-
+/* Styles for the container div where CardStack components are rendered */
+.card-stacks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+  }
+  
 .rotate {
     transition: transform 0.3s ease-in-out;
 }
 
 .rotate:hover {
     animation: rotate 2s linear infinite;
+}
+
+/* Base styles for the grid container */
+.grid {
+    position: relative; /* Needed for absolute positioning context */
+}
+
+.first-card-stack {
+    z-index: 2; /* Ensures this stack is above the other */
+    position: relative; /* Relative positioning to maintain flow but allows z-index */
+}
+
+.second-card-stack {
+    z-index: 1; /* Lower z-index to be under the first stack */
+    position: relative; /* Maintain document flow */
 }

@@ -23,7 +23,7 @@ function Navbar() {
                 <Link className='text-lg font-bold hover:text-white' to="/about" >about</Link>
                 <Link className='text-lg font-bold hover:text-white' to="/clients" >clients</Link>
                 <a className='text-lg  font-bold hover:text-white' href='https://blairchap.substack.com/' target='_blank'>read</a>
-                <a className='text-lg  font-bold hover:text-white' to="/contact">book a call</a>
+                <a href={"https://calendly.com/blair_whatitis/30min"} target='_blank' className='text-lg  font-bold hover:text-white' to="/contact">book a call</a>
             </div>
         </nav>
     )

@@ -28,6 +28,15 @@ import creator14 from '../assets/Quiz_Faces/14.jpg';
 import creator15 from '../assets/Quiz_Faces/15.jpg';
 import creator16 from '../assets/Quiz_Faces/16.jpg';
 
+import cardCreator1 from '../assets/cards/creator1.jpg';
+import cardCreator2 from '../assets/cards/creator2.jpg';
+import cardCreator3 from '../assets/cards/creator3.jpg';
+
+import cardBrand1 from '../assets/cards/brand1.jpg';
+import cardBrand2 from '../assets/cards/brand2.jpg';
+import cardBrand3 from '../assets/cards/brand3.jpg';
+import cardBrand4 from '../assets/cards/brand4.jpg';
+
 import CardStack from '../components/CardStack';
 
 const ImageComponent = ({ src }) => (
@@ -41,9 +50,9 @@ function HomePage() {
         creator7, creator8, creator9, creator10, creator11, creator12,
         creator13, creator14, creator15, creator16
     ];
-    
-    const brands = [image1];
-    const creators = [image2, memesMatter, gardenMarcus, recklessBen];
+
+    const brands = [cardBrand1, cardBrand2, cardBrand3, cardBrand4];
+    const creators = [cardCreator1, cardCreator2, cardCreator3, recklessBen];
 
     return <div className="p-4 font-bold text-lg sm:text-xl md:text-2xl text-white max-w-6xl mx-auto">
 
@@ -52,14 +61,14 @@ function HomePage() {
         <p className='text-center'>Do you need help running your socials?</p>
 
         <div className='mt-7 w-full flex justify-center'>
-            <a to="/contact" className="p-5 bg-gradient-to-r from-brandGreen to-brandDarkGreen rounded-full text-brandPurple text-xl hover:opacity-90">book a call</a>
+            <a href={"https://calendly.com/blair_whatitis/30min"} target='_blank' className="p-5 bg-gradient-to-r from-brandGreen to-brandDarkGreen rounded-full text-brandPurple text-xl hover:opacity-90">book a call</a>
         </div>
 
         <div className="py-5 w-full mx-auto">
-            <h1 className="text-center p-2 font-bold">We work with</h1>
-            <div className='py-20 grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-0'>
-            <CardStack images={brands}/>
-            <CardStack images={creators}/>
+            <h1 className="text-center pt-2 font-bold text-3xl">We work with</h1>
+            <div className='pt-5 pb-20 grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-0'>
+                <CardStack images={brands} title={"brands"} />
+                <CardStack images={creators} title={"creators"} />
             </div>
         </div>
 

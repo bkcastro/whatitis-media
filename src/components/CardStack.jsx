@@ -5,27 +5,47 @@ import move from "lodash-move";
 const CARD_OFFSET = 10;
 const SCALE_FACTOR = 0.06;
 
-const CardStack = ({ images }) => {
+const CardStack = ({ images, title }) => {
   const [cards, setCards] = React.useState(images || []);
 
   const moveToEnd = from => {
     setCards(move(cards, from, cards.length - 1));
   };
 
+  // Responsive styles for the card wrap and cards
+  const responsiveStyles = {
+    cardWrapStyle: {
+      position: "relative",
+      width: "90vw",  // responsive width, max 350px
+      height: "calc(90vw * 0.6286)",  // maintain aspect ratio, max 220px
+      maxWidth: "450px",
+      maxHeight: "300px",
+    },
+    cardStyle: {
+      position: "absolute",
+      width: "100%",  // Use 100% of parent's width
+      height: "100%",  // Use 100% of parent's height
+      borderRadius: "8px",
+      transformOrigin: "top center",
+      listStyle: "none"
+    }
+  };
+
   return (
-    <div style={wrapperStyle}>
-      <ul style={cardWrapStyle}>
+    <div className="flex flex-col gap-14" style={wrapperStyle}>
+      {title && <h2 className="text-brandGreen italic uppercase font-bold text-3xl md:text-4xl">{title}</h2>}
+      <ul style={responsiveStyles.cardWrapStyle}>
         {cards.map((imgSrc, index) => {
           const canDrag = index === 0;
 
           return (
             <motion.li
-              key={imgSrc}  // Ensure the key is unique and correct
+              key={imgSrc}
               style={{
-                ...cardStyle,
-                backgroundImage: `url(${imgSrc})`,  // Set background image
-                backgroundSize: 'cover',  // Cover the entire area of the card
-                backgroundPosition: 'center',  // Center the background image
+                ...responsiveStyles.cardStyle,
+                backgroundImage: `url(${imgSrc})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
                 cursor: canDrag ? "grab" : "auto"
               }}
               animate={{
@@ -53,21 +73,6 @@ const wrapperStyle = {
   alignItems: "center",
   justifyContent: "center",
   height: "auto"
-};
-
-const cardWrapStyle = {
-  position: "relative",
-  width: "350px",
-  height: "220px"
-};
-
-const cardStyle = {
-  position: "absolute",
-  width: "350px",
-  height: "220px",
-  borderRadius: "8px",
-  transformOrigin: "top center",
-  listStyle: "none"
 };
 
 export default CardStack;

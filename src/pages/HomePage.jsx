@@ -34,7 +34,7 @@ import cardCreator3 from '../assets/cards/creator3.jpg';
 
 import cardBrand1 from '../assets/cards/brand1.jpg';
 import cardBrand2 from '../assets/cards/brand2.jpg';
-import cardBrand3 from '../assets/cards/brand3.jpg';
+import cardBrand3 from '../assets/cards/brand5.jpg';
 import cardBrand4 from '../assets/cards/brand4.jpg';
 
 import CardStack from '../components/CardStack';
@@ -58,17 +58,20 @@ function HomePage() {
 
         <p className='pb-5 text-center w-[300px] sm:w-[350px] md:w-[400px lg:w-[800px] mx-auto'>Whatitis <span className="text-brandGreen">Media</span> is a boutique organic social agency focused on helping you make  <span className='text-brandGreen'>viral content. </span> </p>
         <p className='pb-5 text-center'>We have generated over <span className='text-brandGreen'>3 billion organic views.</span> </p>
-        <p className='text-center'>Do you need help running your socials?</p>
-
-        <div className='mt-7 w-full flex justify-center'>
-            <a href={"https://calendly.com/blair_whatitis/30min"} target='_blank' className="p-5 bg-gradient-to-r from-brandGreen to-brandDarkGreen rounded-full text-brandPurple text-xl hover:opacity-90">book a call</a>
-        </div>
 
         <div className="py-5 w-full mx-auto">
             <h1 className="text-center pt-2 font-bold text-3xl">We work with</h1>
-            <div className='pt-5 pb-20 grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-0'>
+            <div className='pt-5 pb-12 sm:pb-16 md:pb-20 grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 lg:gap-0'>
                 <CardStack images={brands} title={"brands"} />
                 <CardStack images={creators} title={"creators"} />
+            </div>
+        </div>
+
+        <div className='pb-12'>
+            <p className='text-center'>Do you need help running your socials?</p>
+
+            <div className='mt-7 w-full flex justify-center'>
+                <a href={"https://calendly.com/blair_whatitis/30min"} target='_blank' className="p-5 bg-gradient-to-r from-brandGreen to-brandDarkGreen rounded-full text-brandPurple text-xl hover:opacity-90">book a call</a>
             </div>
         </div>
 
@@ -82,10 +85,18 @@ function HomePage() {
             </div>
         </div>
 
-        <h2 className='pt-10 text-center'>Our methodology involves analyzing content in <span className='text-brandGreen'>3 dimensions.</span></h2>
+        <h2 className='pb-10 pt-14 text-center'>Our methodology involves analyzing content in <span className='text-brandGreen'>3 dimensions.</span></h2>
         <Methodology></Methodology>
         {//<h1 className='text-center p-2'>Check out our <span className='text-brandGreen font-bold underline italic'>WORKSHEET</span> to see how your content matches up!</h1>
         }
+
+        <div className='py-10'>
+            <p className='text-center'>Find out how you can go viral consistently:</p>
+
+            <div className='mt-7 w-full flex justify-center'>
+                <a href={"https://calendly.com/blair_whatitis/30min"} target='_blank' className="p-5 bg-gradient-to-r from-brandGreen to-brandDarkGreen rounded-full text-brandPurple text-xl hover:opacity-90">book a call</a>
+            </div>
+        </div>
 
     </div>
 }

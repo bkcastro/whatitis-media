@@ -101,62 +101,65 @@ function ResettableOrbitControls() {
 function Methodology() {
 
     return (
-        <div className="rounded-md flex flex-wrap justify-center gap-4 p-2 mt-4 sm:mt-10 w-full h-fit lg:p-4"  >
-            <div className='w-[250px] h-[250px] sm:w-[275px] sm:h-[275px]  md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] hover:cursor-pointer'>
-                <Canvas>
-                    <ambientLight color={0xffffff} intensity={1.8} />
-                    <pointLight color={0xffffff} position={[1, 2, 1]} />
-                    <Genre />
-                    <Text
-                        scale={[.9, .9, .9]}
-                        color={0xffffff} // default
-                        anchorX="center" // default
-                        anchorY="middle" // default
-                        position={[0, -2.3, 1]}
-                        fontWeight={500}
-                    >{`genre`}
-                        <meshStandardMaterial color="white" emissive="white" emissiveIntensity={300} />
-                    </Text>
-                    <ResettableOrbitControls />
-                </Canvas>
-            </div>
-            <div className='w-[250px] h-[250px] sm:w-[275px] sm:h-[275px]  md:w-[300px] md:h-[300px]  lg:w-[350px] lg:h-[350px] hover:cursor-pointer'>
-                <Canvas>
-                    <ambientLight color={0xffffff} intensity={1.8} />
-                    <pointLight color={0xffffff} position={[-1, -1, 1]} />
-                    <Design />
-                    <Text
-                        scale={[.9, .9, .9]}
-                        color={0xffffff} // default
-                        anchorX="center" // default
-                        anchorY="middle" // default
-                        position={[0, -2.3, 1]}
-                        fontWeight={500}
-                    >{`design`}
-                        <meshStandardMaterial color="white" emissive="white" emissiveIntensity={300} />
-                    </Text>
-                    <ResettableOrbitControls />
-                </Canvas>
-            </div>
-            <div className='w-[250px] h-[250px] sm:w-[275px] sm:h-[275px]  md:w-[300px] md:h-[300px]  lg:w-[350px] lg:h-[350px] hover:cursor-pointer'>
-                <Canvas>
-                    <ambientLight color={0xffffff} intensity={1.8} />
-                    <pointLight color={0xffffff} position={[1, 0, 1]} />
-                    <Persona />
-                    <Text
-                        fontStyle='bold'
-                        fontSize={1}
-                        scale={[.9, .9, .9]}
-                        color={0xffffff} // default
-                        anchorX="center" // def
-                        anchorY="middle" // default
-                        position={[0, -2.3, 1]}
-                        fontWeight={500}
-                    >{`persona`}
-                        <meshStandardMaterial color="white" emissive="white" emissiveIntensity={300} />
-                    </Text>
-                    <ResettableOrbitControls />
-                </Canvas>
+        <div className='flex flex-col'>
+            <h2 className=' pt-14 text-center'>Our methodology involves analyzing content in <span className='text-brandGreen'>3 dimensions.</span></h2>
+            <div className="rounded-md flex flex-wrap justify-center gap-4 p-2 mt-4 sm:mt-10 w-full h-fit lg:p-4"  >
+                <div className='w-[250px] h-[250px] sm:w-[275px] sm:h-[275px]  md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] hover:cursor-pointer'>
+                    <Canvas>
+                        <ambientLight color={0xffffff} intensity={1.8} />
+                        <pointLight color={0xffffff} position={[1, 2, 1]} />
+                        <Genre />
+                        <Text
+                            scale={[.9, .9, .9]}
+                            color={0xffffff} // default
+                            anchorX="center" // default
+                            anchorY="middle" // default
+                            position={[0, -2.3, 1]}
+                            fontWeight={500}
+                        >{`genre`}
+                            <meshStandardMaterial color="white" emissive="white" emissiveIntensity={300} />
+                        </Text>
+                        <ResettableOrbitControls />
+                    </Canvas>
+                </div>
+                <div className='w-[250px] h-[250px] sm:w-[275px] sm:h-[275px]  md:w-[300px] md:h-[300px]  lg:w-[350px] lg:h-[350px] hover:cursor-pointer'>
+                    <Canvas>
+                        <ambientLight color={0xffffff} intensity={1.8} />
+                        <pointLight color={0xffffff} position={[-1, -1, 1]} />
+                        <Design />
+                        <Text
+                            scale={[.9, .9, .9]}
+                            color={0xffffff} // default
+                            anchorX="center" // default
+                            anchorY="middle" // default
+                            position={[0, -2.3, 1]}
+                            fontWeight={500}
+                        >{`design`}
+                            <meshStandardMaterial color="white" emissive="white" emissiveIntensity={300} />
+                        </Text>
+                        <ResettableOrbitControls />
+                    </Canvas>
+                </div>
+                <div className='w-[250px] h-[250px] sm:w-[275px] sm:h-[275px]  md:w-[300px] md:h-[300px]  lg:w-[350px] lg:h-[350px] hover:cursor-pointer'>
+                    <Canvas>
+                        <ambientLight color={0xffffff} intensity={1.8} />
+                        <pointLight color={0xffffff} position={[1, 0, 1]} />
+                        <Persona />
+                        <Text
+                            fontStyle='bold'
+                            fontSize={1}
+                            scale={[.9, .9, .9]}
+                            color={0xffffff} // default
+                            anchorX="center" // def
+                            anchorY="middle" // default
+                            position={[0, -2.3, 1]}
+                            fontWeight={500}
+                        >{`persona`}
+                            <meshStandardMaterial color="white" emissive="white" emissiveIntensity={300} />
+                        </Text>
+                        <ResettableOrbitControls />
+                    </Canvas>
+                </div>
             </div>
         </div>
     );

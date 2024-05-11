@@ -1,16 +1,6 @@
 // HomePage.js
 import Methodology from '../components/methodology/Methodology';
 
-// import CardStack from '../components/CardStack';
-
-// Brands 
-import image1 from '../assets/pp.png';
-// Clients
-import image2 from '../assets/memesMatter.jpg';
-import memesMatter from '../assets/creators/memes-matter.jpg';
-import gardenMarcus from '../assets/creators/garden-marcus.jpg';
-import recklessBen from '../assets/creators/recklessben.jpg';
-
 import creator1 from '../assets/Quiz_Faces/1.jpg';
 import creator2 from '../assets/Quiz_Faces/2.jpg';
 import creator3 from '../assets/Quiz_Faces/3.jpg';
@@ -52,7 +42,7 @@ function HomePage() {
     ];
 
     const brands = [cardBrand1, cardBrand2, cardBrand3, cardBrand4];
-    const creators = [cardCreator1, cardCreator2, cardCreator3, recklessBen];
+    const creators = [cardCreator1, cardCreator2, cardCreator3];
 
     return <div className="p-4 font-bold text-lg sm:text-xl md:text-2xl text-white max-w-6xl mx-auto">
 
@@ -85,16 +75,14 @@ function HomePage() {
             </div>
         </div>
 
-        <h2 className='pb-10 pt-14 text-center'>Our methodology involves analyzing content in <span className='text-brandGreen'>3 dimensions.</span></h2>
+
         <Methodology></Methodology>
-        {//<h1 className='text-center p-2'>Check out our <span className='text-brandGreen font-bold underline italic'>WORKSHEET</span> to see how your content matches up!</h1>
-        }
 
         <div className='py-10'>
             <p className='text-center'>Find out how you can go viral consistently:</p>
 
             <div className='mt-7 w-full flex justify-center'>
-                <a href={"https://calendly.com/blair_whatitis/30min"} target='_blank' className="p-5 bg-gradient-to-r from-brandGreen to-brandDarkGreen rounded-full text-brandPurple text-xl hover:opacity-90">book a call</a>
+                <a href={"https://calendly.com/blair_whatitis/30min"} target='_blank' className="p-5 bg-gradient-to-r from-brandGreen to-brandDarkGreen rounded-full text-brandPurple text-xl hover:opacity-90">book a 30-minute discovery call</a>
             </div>
         </div>
 

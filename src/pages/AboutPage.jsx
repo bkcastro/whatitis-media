@@ -42,17 +42,17 @@ function AboutPage() {
         },
     ]
 
-    return <div className="p-4 max-w-6xl mx-auto font-bold text-lg sm:text-xl md:text-2xl text-white max-w-6xl mx-auto">
+    return <div className="p-4 max-w-6xl mx-auto font-bold text-lg sm:text-xl md:text-2xl text-white max-w-6xl mx-auto gap-5 flex flex-col">
         <div className='grid grid-cols-1 gap-4 text-md sm:text-lg md:text-xl'>
             <p className=''>Whatitis <span className="text-brandGreen">Media</span> started 7 years ago as a YouTube channel analyzing internet culture.
-                Our series Why It Works broke down  content using a 3-part methodology. The first video below is an early example of the success we saw with this format.</p>
+                Our series <span className="text-brandGreen">Why It Works</span> broke down  content using a 3-part methodology. The first video below is an early example of the success we saw with this format.</p>
 
             <p className=''>The value delivered from these analyses was quickly seen and thus a new era
-                of Whatitis was born. One aimed a creating viral content to prove our theories. In video 2, you can see the beginnings of
-                viral organic content made by Whatitis. </p>
+                of <span className="text-brandGreen">Whatitis </span>was born. One aimed a creating viral content to prove our theories. In video 2, you can see the beginnings of
+                viral organic content made by <span className="text-brandGreen">Whatitis.</span> </p>
 
             <p className=''>
-                Today, Whatitis exists as an authority on viral internet culture. Our new series like Why It Doesn't Work, aim to showcase the
+                Today, <span className="text-brandGreen">Whatitis</span> exists as an authority on viral internet culture. Our new series like <span className="text-brandGreen">Why It Doesn't Work</span>, aim to showcase the
                 small memetic changes content creators and brands can make to better equip themselves for going viral! </p>
 
         </div>

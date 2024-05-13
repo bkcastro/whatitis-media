@@ -46,8 +46,10 @@ function HomePage() {
 
     return <div className="p-4 font-bold text-lg sm:text-xl md:text-2xl text-white max-w-6xl mx-auto">
 
-        <p className='pb-5 text-center w-[300px] sm:w-[350px] md:w-[400px lg:w-[800px] mx-auto'>Whatitis <span className="text-brandGreen">Media</span> is a boutique organic social agency focused on helping you make  <span className='text-brandGreen'>viral content. </span> </p>
-        <p className='pb-5 text-center'>We have generated over <span className='text-brandGreen'>3 billion organic views.</span> </p>
+        <div className="border-2 border-brandGreen w-[300px] sm:w-[350px] md:w-[500px] lg:w-[800px] mx-auto text-center p-5 flex flex-col justify-center gap-5">
+            <p>Whatitis <span className="text-brandGreen">Media</span> is a boutique organic social agency focused on helping you make  <span className='text-brandGreen'>viral content. </span> </p>
+            <p>We have generated over <span className='text-brandGreen'>3 billion organic views.</span> </p>
+        </div>
 
         <div className="py-5 w-full mx-auto">
             <h1 className="text-center pt-2 font-bold text-3xl">We work with</h1>

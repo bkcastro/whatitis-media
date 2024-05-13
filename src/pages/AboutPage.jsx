@@ -24,20 +24,20 @@ function AboutPage() {
         {
             name: "Chris",
             title: "Meme Magician",
-            about: <p>Foremost expert on Memetics and Jungian Archetypes</p>,
+            about: <p>Foremost expert on Memetics and Jungian Archetypes.</p>,
             photo: chris,
         },
 
         {
             name: "Lydia",
-            title: "Head of Partnership",
+            title: "Head of Partnerships",
             about: <p>LA’s most well-known influencer who doesn’t make content.</p>,
             photo: lydia,
         },
         {
             name: "Andre",
             title: "Head of Design",
-            about: <p>LA’s most well-known influencer who doesn’t make content.</p>,
+            about: <p>Design lead who moonlights as a Honky Tonk and Bluegrass musician (proficient in steel guitar, banjo, and fiddle).</p>,
             photo: andre,
         },
     ]

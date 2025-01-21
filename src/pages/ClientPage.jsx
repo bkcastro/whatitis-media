@@ -9,7 +9,6 @@ import sg from '../assets/brands/studioghibli.png';
 
 import rosebud from '../assets/brands/rosebud-2.png';
 import usc from '../assets/brands/ucscLogo.png';
-import tetra from '../assets/brands/tetra-4.png';
 
 import memesMatter from '../assets/creators/memes-matter.jpg';
 import gardenMarcus from '../assets/creators/garden-marcus.jpg';
@@ -29,7 +28,6 @@ function ClientsPage() {
         { photo: sg, link: 'https://gkids.com/films/the-boy-and-the-heron/' },
         { photo: fgm, link: 'https://www.tiktok.com/@readyfictions?lang=en' },
         { photo: usc, link: 'https://polymathic.usc.edu/ahmanson-lab' },
-        { photo: tetra, link: 'https://www.tetragrammaton.com/' },
     ];
 
     const creators = [
